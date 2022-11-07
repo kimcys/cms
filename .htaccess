@@ -1,0 +1,10 @@
+RewriteEngine  on
+RewriteRule  action.do   home\.php  [T=application/x-httpd-php]
+RewriteRule  action.check   chklogin\.php  [T=application/x-httpd-php]
+RewriteRule  action.dload   download\.php  [T=application/x-httpd-php]
+RewriteRule  action.ajax   ajax\.php  [T=application/x-httpd-php]
+RewriteRule  action.print   cetak\.php  [T=application/x-httpd-php]
+RewriteRule  action.pdf   pdf\.php  [T=application/x-httpd-php]
+RewriteRule  action.excel   excel\.php  [T=application/x-httpd-php]
+
+SetEnv HTACCESS on
