@@ -30,13 +30,10 @@ if (isset($_POST['user']) and isset($_POST['pass'])) {
             }
             alert('Selamat Datang ke SeaShells');
         }
+    }  else{
+        alert ('Maklumat Tidak Sah');
+        }
 }
-    else{
-        alert('Maklumat Tidak Sah');
-    }
-
-    }
-   
 
 if (in_array(@$_SESSION[$GLOBALS['fw_sistem']]['superadmin'], $GLOBALS['fw_superadmin'])) {
     $username = @$_POST['username'];
@@ -67,22 +64,24 @@ else {
 
     if($upmidExist){
         $condition= "u_upm_id='{$_POST['user']}'";
-        $userData = Db::display('users','u_upm_id,u_name,u_rr_id',$condition,'Y');
+        $userData = Db::display('users','u_upm_id,u_name,u_rr_id,u_id',$condition,'Y');
 
         if(is_array($userData)){
             extract($userData);
 
-            $pengguna = array('email' => "$u_upm_id", 'name' => "$u_name", 'role' => "$u_rr_id");
+            $pengguna = array('email' => "$u_upm_id", 'name' => "$u_name", 'role' => "$u_rr_id", 'u_id'=>"$u_id");
         }
     }
-    pr($pengguna);
-
 }
 
     if (is_array($pengguna)) {
-        $_SESSION[$GLOBALS['fw_sistem']] = array("username" => $pengguna['email'],
+        $_SESSION[$GLOBALS['fw_sistem']] = 
+        array(
+            "username" => $pengguna['email'],
             "nama" => $pengguna['name'],
-            "peranan" => $pengguna['role']);
+            "peranan" => $pengguna['role'],
+            "u_id"=> $pengguna['u_id']
+        );
 
         if (@$chguser == '') {
             if (in_array($username, $GLOBALS['fw_superadmin'])) {
@@ -92,6 +91,7 @@ else {
             $_SESSION[$GLOBALS['fw_sistem']]['superadmin'] = $usernow;
         }
         gopage("action.do");
+
     } else {
         alert('Pengguna tidak wujud');
         gopage("logout.php", 3);

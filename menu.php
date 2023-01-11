@@ -5,10 +5,10 @@ $submenu = @$_GET['submenu'];
 
 <ul class="nav">
     <?php
-    if (in_array(@$_SESSION[$GLOBALS['fw_sistem']]['superadmin'], $GLOBALS['fw_superadmin'])) {
+    if (in_array(@$_SESSION[$GLOBALS['fw_sistem']]['superadmin'], $GLOBALS['fw_superadmin']))  {
         ?>
         <li class="has-sub <?php
-        if ($menu == 'Superadmin') {
+        if ($menu == 'Superadmin' ) {
             echo 'active';
         }
         ?>">

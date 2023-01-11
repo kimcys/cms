@@ -5,6 +5,7 @@ date_default_timezone_set("Asia/Kuala_Lumpur");
 $today = date("Y-m-d H:i:s");
 
 require_once "include.php";
+require_once 'allcss.php';
 
 $server = str_replace("www.", "", $_SERVER["SERVER_NAME"]);
 

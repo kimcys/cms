@@ -1128,7 +1128,8 @@ blockquote.pull-right small:after {
 .nav-stacked > li {
 	float: none;
 }
-
+.home-section::before,
+.home-section::after,
 .btn-group-vertical>.btn-group:after, 
 .btn-group-vertical>.btn-group:before, 
 .btn-toolbar:after, 

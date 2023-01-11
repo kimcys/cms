@@ -5,8 +5,12 @@
 <link href="assets/plugins/ionicons/css/ionicons.min.css" rel="stylesheet" />
 <link href="assets/css/animate.min.css" rel="stylesheet" />
 <link href="assets/css/style.min.css" rel="stylesheet" />
+<link href="assets/css/styles.min.css" rel="stylesheet" />
+<link href="assets/css/styles.css" rel="stylesheet" />
 <link href="assets/css/style-responsive.min.css" rel="stylesheet" />
 <link href="assets/css/theme/default.css" rel="stylesheet" id="theme" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <!-- ================== END BASE CSS STYLE ================== -->
 
 <!-- ================== BEGIN PAGE LEVEL STYLE ================== -->
@@ -23,7 +27,8 @@
 <link href="assets/plugins/jquery-tag-it/css/jquery.tagit.css" rel="stylesheet" />
 <link href="assets/plugins/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet" />
 <link href="assets/plugins/select2/dist/css/select2.min.css" rel="stylesheet" />
-<link href="assets/plugins/bootstrap-eonasdan-datetimepicker/build/css/bootstrap-datetimepicker.min.css" rel="stylesheet" />
+<link href="assets/plugins/bootstrap-eonasdan-datetimepicker/build/css/bootstrap-datetimepicker.min.css"
+    rel="stylesheet" />
 <link href="assets/plugins/bootstrap-colorpalette/css/bootstrap-colorpalette.css" rel="stylesheet" />
 <link href="assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker.css" rel="stylesheet" />
 <link href="assets/plugins/jquery-simplecolorpicker/jquery.simplecolorpicker-fontawesome.css" rel="stylesheet" />

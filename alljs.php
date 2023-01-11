@@ -10,9 +10,18 @@
 <![endif]-->
 <script src="assets/plugins/slimscroll/jquery.slimscroll.min.js"></script>
 <script src="assets/plugins/jquery-cookie/jquery.cookie.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="//code.jquery.com/jquery-1.9.1.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>
+<script src="assets/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <!-- ================== END BASE JS ================== -->
 
 <!-- ================== BEGIN PAGE LEVEL JS ================== -->
+<script src="js/jquery.min.js"></script>
+<script src="js/Chart.min.js"></script>
 <script src="assets/plugins/bootstrap-datepicker/js/bootstrap-datepicker.js"></script>
 <script src="assets/plugins/ionRangeSlider/js/ion-rangeSlider/ion.rangeSlider.min.js"></script>
 <script src="assets/plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
@@ -72,14 +81,14 @@
 <!-- ================== BEGIN PAGE HIGHCHART JS ================== -->
 
 <script>
-    $(document).ready(function () {
-        App.init();
-        FormPlugins.init();
-        TableManageButtons.init();
-        Notification.init();
-        EmailCompose.init();
-        Gallery.init();
-        FormWizard.init();
-        ComingSoon.init();
-    });
+$(document).ready(function() {
+    App.init();
+    FormPlugins.init();
+    TableManageButtons.init();
+    Notification.init();
+    EmailCompose.init();
+    Gallery.init();
+    FormWizard.init();
+    ComingSoon.init();
+});
 </script>

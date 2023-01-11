@@ -371,6 +371,35 @@ class Db {
 
         return @$val;
     }
+
+    public static function chkval2($table, $field, $condition, $dbg = 'N') {
+        $sql = "SELECT distinct $field FROM $table WHERE $condition";
+
+        Db::showsql('chkval', $sql);
+
+        if ($dbg == 'Y') {
+            echo "<br>DEBUG : " . $sql . "<br>";
+        }
+        
+        try {
+            list($stmt, $sts) = Db::query($sql);
+
+            if ($sts != '1') {
+                $val = $sts;
+            } else {
+                $nama_field = Db::field_name($stmt, 0);
+                $result = $stmt->setFetchMode(PDO::FETCH_ASSOC);
+                $row = $stmt->fetchAll();
+                if (is_array($row)) {
+                $val = @$row[0][strtolower($nama_field)];
+                }
+            }
+        } catch (PDOException $e) {
+            echo "Error: " . $e->getMessage();
+        }
+
+        return @$val;
+    }
     
     public static function chkmax($table, $field, $condition = '1=1', $dbg = 'N') {
         $sql = "SELECT MAX($field) as max FROM $table WHERE $condition";
